@@ -3,6 +3,7 @@ FactoryGirl.define do
     name "MyString"
     age "MyString"
     adress "MyString"
+    phone "MyString"
     cpf "MyString"
     bio "MyText"
     experience "MyText"

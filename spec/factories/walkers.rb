@@ -1,14 +1,14 @@
 FactoryGirl.define do
   factory :walker do
-    name "MyString"
-    age "MyString"
-    adress "MyString"
-    region "MyString"
-    cpf "MyString"
-    bio "MyText"
-    experience "MyText"
-    price "MyString"
-    email "MyString"
-    phone "MyString"
+    name 'Paulo'
+    age '34'
+    adress 'Rua 25 de Março'
+    region 'Centro'
+    cpf '3241412151'
+    bio 'Sempre gostei de dogs'
+    experience '10 anos de trabalho com dogs'
+    price '50'
+    email 'dog@walker.com'
+    phone '1211412'
   end
 end

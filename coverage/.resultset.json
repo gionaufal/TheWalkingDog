@@ -1,54 +1,54 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/campuscode7/workspace/the_walking_dog/app/helpers/application_helper.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/models/walker.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/models/walker.rb": [
         1,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/models/application_record.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/controllers/home_controller.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/controllers/home_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/controllers/application_controller.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/channels/application_cable/channel.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/channels/application_cable/connection.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/jobs/application_job.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/mailers/application_mailer.rb": [
+      "/Users/campuscode3/workspace/TheWalkingDog/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1475188714
+    "timestamp": 1475193897
   }
 }

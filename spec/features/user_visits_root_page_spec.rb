@@ -9,7 +9,5 @@ feature 'User visits root page' do
     expect(page).to have_css('.walker', 20)
     expect(page).to have_content("Encontre pessoas especializadas para passear \
                                   com seu melhor amigo próximas a você")
-                                  
-
   end
 end

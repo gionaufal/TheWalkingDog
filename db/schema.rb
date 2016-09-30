@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160929224542) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+ActiveRecord::Schema.define(version: 20160929224754) do
 
   create_table "walkers", force: :cascade do |t|
     t.string   "name"
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160929224542) do
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "region"
   end
 
 end

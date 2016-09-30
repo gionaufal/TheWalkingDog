@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/campuscode7/workspace/the_walking_dog/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/campuscode7/workspace/the_walking_dog/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/campuscode7/workspace/the_walking_dog/app/helpers/application_helper.rb": [
         1,
         null
@@ -9,18 +22,11 @@
         1,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/home_controller.rb": [
         1,
         1,
-        2,
-        2,
-        null,
-        null,
+        5,
+        5,
         null,
         null
       ],
@@ -64,6 +70,6 @@
         0
       ]
     },
-    "timestamp": 1475193868
+    "timestamp": 1475197485
   }
 }

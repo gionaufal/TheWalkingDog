@@ -1,0 +1,10 @@
+<section class='walkers'>
+  <%= @walkers.each do |walker| %>
+    <%= link_to walker do %>
+    <div class="walker">
+      <p><%= walker.name %></p>
+      <p><%= walker.region %></p>
+    </div>
+    <% end %>
+  <% end %>
+</section>

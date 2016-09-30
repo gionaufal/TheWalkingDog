@@ -4,6 +4,14 @@
   </p>
 </section>
 
+<section class='search'>
+  <%= form_tag("/search/", method: 'get') do%>
+    <%= label_tag(:region, 'Onde você está?')%>
+    <%= select_tag(:region, options_for_select(@regions)) %>
+    <%= submit_tag('Procurar') %>
+
+  <% end %>
+</section>
 
 <section class='walkers'>
   <%= @walkers.each do |walker| %>

@@ -18,12 +18,27 @@
         1,
         1,
         2,
+        2,
+        null,
+        null,
         null,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/application_controller.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/campuscode7/workspace/the_walking_dog/app/models/region.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/campuscode7/workspace/the_walking_dog/app/controllers/walkers_controller.rb": [
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/channels/application_cable/channel.rb": [
@@ -47,13 +62,8 @@
         0,
         0,
         0
-      ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/models/region.rb": [
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1475191085
+    "timestamp": 1475193868
   }
 }

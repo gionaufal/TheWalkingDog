@@ -13,6 +13,5 @@ feature 'user search for pet walker by region' do
     expect(page).to have_content walker.region
 
     expect(page).to have_no_content walker1.region
-
   end
 end

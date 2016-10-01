@@ -1,25 +1,29 @@
-<section id='about'>
-  <p>
-    Encontre pessoas especializadas para passear com seu melhor amigo próximas a você
-  </p>
-</section>
+<% if @walkers.empty? %>
+  <%= flash[:alert] %>
+<% else %>
+  <section id='about'>
+    <p>
+      Encontre pessoas especializadas para passear com seu melhor amigo próximas a você
+    </p>
+  </section>
 
-<section class='search'>
-  <%= form_tag("/search/", method: 'get') do%>
-    <%= label_tag(:region, 'Onde você está?')%>
-    <%= select_tag(:region, options_for_select(@regions)) %>
-    <%= submit_tag('Procurar') %>
+  <section class='search'>
+    <%= form_tag("/search/", method: 'get') do%>
+      <%= label_tag(:region, 'Onde você está?')%>
+      <%= select_tag(:region, options_for_select(@regions)) %>
+      <%= submit_tag('Procurar') %>
 
-  <% end %>
-</section>
-
-<section class='walkers'>
-  <%= @walkers.each do |walker| %>
-    <%= link_to walker do %>
-    <div class="walker">
-      <p><%= walker.name %></p>
-      <p><%= walker.region %></p>
-    </div>
     <% end %>
-  <% end %>
-</section>
+  </section>
+
+  <section class='walkers'>
+    <%= @walkers.each do |walker| %>
+      <%= link_to walker do %>
+      <div class="walker">
+        <p><%= walker.name %></p>
+        <p><%= walker.region %></p>
+      </div>
+      <% end %>
+    <% end %>
+  </section>
+<% end %>

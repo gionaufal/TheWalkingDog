@@ -18,16 +18,12 @@
         1,
         null
       ],
-      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/models/walker.rb": [
-        1,
-        null
-      ],
       "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/controllers/home_controller.rb": [
         1,
         1,
-        7,
-        7,
-        7,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -36,20 +32,13 @@
         1,
         null
       ],
-      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/models/region.rb": [
-        1,
+      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/models/walker.rb": [
         1,
         null
       ],
-      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/controllers/walkers_controller.rb": [
+      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/models/region.rb": [
         1,
         1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
         null
       ],
       "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/channels/application_cable/channel.rb": [
@@ -59,6 +48,26 @@
         0
       ],
       "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/controllers/users_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/glaucia_isidoro/Documents/CampusCode/TheWalkingDog/app/controllers/walkers_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -75,6 +84,6 @@
         0
       ]
     },
-    "timestamp": 1475287785
+    "timestamp": 1475418511
   }
 }

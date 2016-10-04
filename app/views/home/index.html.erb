@@ -1,3 +1,6 @@
+<section class="sign-in">
+  <%= link_to 'Se cadastre como walker!', new_walker_registration_path %>
+</section>
 <% if @walkers.empty? %>
   <%= flash[:alert] %>
 <% else %>
@@ -17,7 +20,7 @@
   </section>
 
   <section class='walkers'>
-    <%= @walkers.each do |walker| %>
+    <% @walkers.each do |walker| %>
       <%= link_to walker do %>
       <div class="walker">
         <p><%= walker.name %></p>

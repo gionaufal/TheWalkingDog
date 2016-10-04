@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :walkers
   devise_for :users
   scope 'meu-perfil' do
     resources :dogs, only: [:new, :create]

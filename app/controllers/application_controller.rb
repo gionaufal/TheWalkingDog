@@ -5,10 +5,14 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    if resource_class == User
+    if resource_class == Walker
+      devise_parameter_sanitizer.permit(:sign_up, keys: [
+        :name, :age, :address, :cpf, :bio, :experience,
+        :price, :phone, :region
+      ])
+    elsif resource_class == User
       devise_parameter_sanitizer.permit(:sign_up, keys:
                                        [:name, :address, :cpf, :phone])
     end
   end
-
 end

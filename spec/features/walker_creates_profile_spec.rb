@@ -21,7 +21,9 @@ feature 'walker creates a profile' do
     fill_in 'Senha', with: walker.password
     fill_in 'Confirmar senha', with: walker.password
 
-    click_on 'Cadastrar'
+    within('form') do
+      click_on 'Cadastrar'
+    end
 
     expect(page).to have_content 'Você foi cadastrado com sucesso'
     expect(page).to have_content walker.name
@@ -32,8 +34,10 @@ feature 'walker creates a profile' do
 
     click_on 'Se cadastre como walker!'
 
-    click_on 'Cadastrar'
+    within('form') do
+      click_on 'Cadastrar'
+    end
 
-    expect(page).to have_content 'Por favor preencher corretamente'
+    expect(page).to have_content 'não pode ficar em branco'
   end
 end

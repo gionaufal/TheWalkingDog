@@ -2,8 +2,13 @@ require 'rails_helper'
 
 feature 'User searches for region' do
   scenario 'and sees walkers of that region' do
-    create_list(:walker, 3, region: 'Centro')
-    create_list(:walker, 4, region: 'Norte')
+    3.times do |n|
+      create(:walker, email: "walker#{n}@gmail.com", region: 'Centro')
+    end
+
+    4.times do |n|
+      create(:walker, email: "another_walker#{n}@gmail.com", region: 'Norte')
+    end
 
     visit root_path
 

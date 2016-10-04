@@ -2,7 +2,9 @@ require 'rails_helper'
 
 feature 'User visits root page' do
   scenario 'and sees walkers' do
-    create_list(:walker, 20)
+    20.times do |n|
+      create(:walker, email: "walker#{n}@gmail.com")
+    end
 
     visit root_path
 

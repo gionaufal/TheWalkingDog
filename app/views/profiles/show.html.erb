@@ -1,0 +1,29 @@
+<section class='profile'>
+  <h3><%= @user.name %></h3>
+  <p><%= @user.address %></p>
+
+  <% if @user == current_user %>
+    <%= link_to 'Cadastrar Cachorro', new_dog_path, role: 'button'%>
+  <% end %>
+
+</section>
+<section class='dogs'>
+  <% if @user.dogs.empty? %>
+    <% if @user == current_user %>
+      <p>Você ainda não cadastrou nenhum cachorro =(</p>
+    <% else %>
+      <p>Nenhum cachorro foi cadastrado. :(</p>
+    <% end %>
+  <% else %>
+    <% @user.dogs.each do |dog| %>
+      <div class="jumbotron">
+        <%= image_tag dog.avatar.url(:thumb) %>
+        <p><%= dog.name %></p>
+        <p><%= dog.age %> anos</p>
+        <p><%= dog.size %></p>
+        <p><%= dog.race %></p>
+        <p><%= dog.personality %></p>
+      </div>
+    <% end %>
+  <% end %>
+</section>

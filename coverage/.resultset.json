@@ -31,6 +31,17 @@
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/application_controller.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/models/walker.rb": [
@@ -120,6 +131,6 @@
         0
       ]
     },
-    "timestamp": 1475541276
+    "timestamp": 1475542652
   }
 }

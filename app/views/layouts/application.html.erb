@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><span>Olá <%= current_user.name %></span></li>
+              <li><span>Olá, <%= current_user.name %></span></li>
               <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
             <% else %>
               <li><%= link_to 'Cadastrar', new_user_registration_path , class: "btn btn-default navbar-btn", role: "button"%></li>

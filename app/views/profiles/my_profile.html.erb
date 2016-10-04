@@ -5,14 +5,18 @@
 
 </section>
 <section class='dogs'>
-  <% @user.dogs.each do |dog| %>
-    <div class="jumbotron">
-      <%= image_tag dog.avatar.url(:thumb) %>
-      <p><%= dog.name %></p>
-      <p><%= dog.age %> anos</p>
-      <p><%= dog.size %></p>
-      <p><%= dog.race %></p>
-      <p><%= dog.personality %></p>
-    </div>
+  <% if @user.dogs.empty? %>
+    <p>Você ainda não cadastrou nenhum cachorro =(</p>
+  <% else %>
+    <% @user.dogs.each do |dog| %>
+      <div class="jumbotron">
+        <%= image_tag dog.avatar.url(:thumb) %>
+        <p><%= dog.name %></p>
+        <p><%= dog.age %> anos</p>
+        <p><%= dog.size %></p>
+        <p><%= dog.race %></p>
+        <p><%= dog.personality %></p>
+      </div>
+    <% end %>
   <% end %>
 </section>

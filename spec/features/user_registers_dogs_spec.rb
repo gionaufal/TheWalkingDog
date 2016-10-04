@@ -14,7 +14,8 @@ feature 'user registers dogs' do
     fill_in 'Porte', with: 'Pequeno'
     fill_in 'Raça', with: 'Vira-lata'
     fill_in 'Personalidade', with: 'Sociável'
-    attach_file('dog_avatar', "#{Rails.root}/spec/support/fixtures/Dogs-Bite.jpg")
+    attach_file('dog_avatar',
+                "#{Rails.root}/spec/support/fixtures/Dogs-Bite.jpg")
 
     click_on 'Salvar'
 
@@ -25,7 +26,6 @@ feature 'user registers dogs' do
     expect(page).to have_content('Pequeno')
     expect(page).to have_content('Vira-lata')
     expect(page).to have_content('Sociável')
-
   end
   scenario 'must fill all fields' do
     user = create(:user)

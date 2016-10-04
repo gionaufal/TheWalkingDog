@@ -2,9 +2,7 @@ require 'rails_helper'
 
 feature 'walker sees owner profile' do
   scenario 'successfully' do
-
     user = create(:user)
-    dog = create(:dog, user: user)
 
     visit profile_path user
 

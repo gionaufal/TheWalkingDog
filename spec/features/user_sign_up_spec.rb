@@ -34,7 +34,6 @@ feature 'user sign up' do
     fill_in 'CPF', with: user.cpf
     fill_in 'Telefone', with: user.phone
 
-
     within('form') do
       click_on 'Cadastrar'
     end

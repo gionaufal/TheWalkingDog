@@ -27,7 +27,6 @@ feature 'walker creates a profile' do
     expect(page).to have_content walker.name
   end
   scenario 'and dont fill in required fields' do
-
     visit root_path
 
     click_on 'Se cadastre como walker!'

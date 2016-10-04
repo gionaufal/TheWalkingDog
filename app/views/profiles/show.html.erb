@@ -1,12 +1,19 @@
 <section class='profile'>
   <h3><%= @user.name %></h3>
+  <p><%= @user.address %></p>
 
-  <%= link_to 'Cadastrar Cachorro', new_dog_path, role: 'button'%>
+  <% if @user == current_user %>
+    <%= link_to 'Cadastrar Cachorro', new_dog_path, role: 'button'%>
+  <% end %>
 
 </section>
 <section class='dogs'>
   <% if @user.dogs.empty? %>
-    <p>Você ainda não cadastrou nenhum cachorro =(</p>
+    <% if @user == current_user %>
+      <p>Você ainda não cadastrou nenhum cachorro =(</p>
+    <% else %>
+      <p>Nenhum cachorro foi cadastrado. :(</p>
+    <% end %>
   <% else %>
     <% @user.dogs.each do |dog| %>
       <div class="jumbotron">

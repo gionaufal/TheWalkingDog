@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, only: [:show]
-  resources :dogs, only: [:new]
+  scope 'meu-perfil' do
+    resources :dogs, only: [:new, :create]
+  end
   root to: 'home#index'
   resources :walkers, only: [:show]
   get '/search/', to: 'walkers#search'
+  get '/meu-perfil', to: 'profiles#my_profile', as: 'my_profile'
 end

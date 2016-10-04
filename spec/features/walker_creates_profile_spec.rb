@@ -25,11 +25,6 @@ feature 'walker creates a profile' do
 
     expect(page).to have_content 'Você foi cadastrado com sucesso'
     expect(page).to have_content walker.name
-    expect(page).to have_content walker.age
-    expect(page).to have_content walker.bio
-    expect(page).to have_content walker.experience
-    expect(page).to have_content walker.price
-    expect(page).to have_content walker.region
   end
   scenario 'and dont fill in required fields' do
 

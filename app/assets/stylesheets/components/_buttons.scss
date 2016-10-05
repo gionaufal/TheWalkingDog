@@ -1,0 +1,40 @@
+.button, a.button, .navbar-nav > li > a.button {
+  $yellow: rgb(255, 208, 0);
+  $red: rgb(255, 0, 106);
+  $h: 48px;
+  height: $h;
+  line-height: $h;
+  padding: 0 $h/2;
+  background-color: $yellow;
+  color: #fff;
+  text-transform: lowercase;
+  display: inline-block;
+  @include border-radius($h/2);
+  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
+  @include transition(all .4s ease-out);
+  &:hover {
+    color: #fff;
+    background-color: lighten($yellow, 10);
+    text-decoration: none;
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2));
+  }
+  &.red {
+    background-color: $red;
+    &:hover {
+      background-color: lighten($red, 10);
+    }
+  }
+  &.secondary {
+    $h: 36px;
+    height: $h;
+    line-height: $h;
+    background-color: transparent;
+    border: 1px solid $yellow;
+    color: $yellow;
+    @include box-shadow(none);
+    &:hover {
+      background-color: $yellow;
+      color: #fff;
+    }
+  }
+}

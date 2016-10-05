@@ -32,7 +32,7 @@
               <li><span>Olá, <%= current_user.name %></span></li>
               <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
             <% else %>
-              <li><%= link_to 'Cadastrar', new_user_registration_path , class: "btn btn-default navbar-btn", role: "button"%></li>
+              <li><%= link_to 'Cadastrar', new_user_registration_path , class: "button secondary", role: "button"%></li>
             <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->

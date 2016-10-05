@@ -1,5 +1,6 @@
 <section class="sign-in">
-  <%= link_to 'Se cadastre como walker!', new_walker_registration_path %>
+  <%= link_to 'Se cadastre como walker!', new_walker_registration_path,
+    class: "button red", role: "button" %>
 </section>
 <% if @walkers.empty? %>
   <%= flash[:alert] %>

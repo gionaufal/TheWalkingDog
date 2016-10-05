@@ -46,9 +46,8 @@
         1,
         null,
         1,
-        8,
-        4,
-        null,
+        9,
+        5,
         null,
         null,
         4,
@@ -64,6 +63,7 @@
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/profiles_controller.rb": [
+        1,
         1,
         1,
         null,
@@ -110,6 +110,7 @@
         1,
         2,
         null,
+        null,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/walkers_controller.rb": [
@@ -146,6 +147,6 @@
         0
       ]
     },
-    "timestamp": 1475625109
+    "timestamp": 1475626728
   }
 }

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :dogs, only: [:new, :create]
   end
   root to: 'home#index'
+  resources :proposal, only: [:new, :create]
   resources :walkers, only: [:show]
   get '/search/', to: 'walkers#search'
   get '/meu-perfil', to: 'profiles#my_profile', as: 'my_profile'

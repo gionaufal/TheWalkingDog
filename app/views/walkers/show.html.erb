@@ -4,3 +4,7 @@
 <%= @walker.experience %>
 <%= @walker.price %>
 <%= @walker.region %>
+
+<% if current_user != @walker %>
+  <%= link_to 'Enviar proposta', new_proposal_path %>
+<% end %>

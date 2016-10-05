@@ -9,6 +9,8 @@
         null,
         1,
         null,
+        1,
+        1,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/models/application_record.rb": [
@@ -23,9 +25,17 @@
         1,
         null,
         1,
+        1,
+        1,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/campuscode7/workspace/the_walking_dog/app/models/proposal.rb": [
+        1,
+        1,
         1,
         null
       ],
@@ -116,9 +126,16 @@
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/walkers_controller.rb": [
         1,
         1,
+        2,
+        null,
+        null,
+        1,
         1,
         null,
-        null,
+        null
+      ],
+      "/Users/campuscode7/workspace/the_walking_dog/app/controllers/proposal_controller.rb": [
+        1,
         1,
         1,
         null,
@@ -147,6 +164,6 @@
         0
       ]
     },
-    "timestamp": 1475626728
+    "timestamp": 1475629153
   }
 }

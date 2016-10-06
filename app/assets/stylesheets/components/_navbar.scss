@@ -1,0 +1,29 @@
+.navbar.navbar-default {
+  $h: 60px;
+  $button-height: 36px;
+  background-color: transparent;
+  border: none;
+  padding: 24px;
+  min-height: $h;
+  .container-fluid {
+    padding: 0;
+    min-height: $h;
+    .collapse.navbar-collapse {
+      .button {
+        margin-top: ($h - $button-height) / 2;
+      }
+      li {
+        & + li {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+  > .container .navbar-brand, .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    line-height: $h;
+    padding: 0;
+    margin: 0;
+  }
+}

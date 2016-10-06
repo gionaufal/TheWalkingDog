@@ -10,7 +10,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-controller="<%= controller_name %>">
+    <div class="overlay"></div>
     <%= render 'shared/flash' %>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -32,7 +33,8 @@
               <li><span>Olá, <%= current_user.name %></span></li>
               <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
             <% else %>
-              <li><%= link_to 'Cadastrar', new_user_registration_path , class: "button secondary", role: "button"%></li>
+              <li><%= link_to 'login como dono', new_user_session_path , class: "button secondary", role: "button"%></li>
+              <li><%= link_to 'login como walker', new_walker_session_path , class: "button secondary red", role: "button"%></li>
             <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->

@@ -24,6 +24,18 @@
       background-color: lighten($red, 10);
     }
   }
+  &.white {
+    color: $yellow;
+    background-color: #fff;
+  }
+  &.autocomplete__button {
+    .autocomplete__input {
+      color: $yellow;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
   &.secondary {
     $h: 36px;
     height: $h;
@@ -36,5 +48,25 @@
       background-color: $yellow;
       color: #fff;
     }
+    &.red {
+      border: 1px solid $red;
+      color: $red;
+      &:hover {
+        background-color: $red;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .button.primary, a.button.primary {
+    $h: 72px;
+    height: $h;
+    line-height: $h;
+    font-size: $h/3;
+    line-height: $h;
+    @include border-radius($h/2);
   }
 }

@@ -29,11 +29,36 @@
     background-color: #fff;
   }
   &.autocomplete__button {
+    position: relative;
+    overflow: visible;
     .autocomplete__input {
       color: $yellow;
       background-color: transparent;
       border: none;
       outline: none;
+    }
+    .autocomplete__list {
+      top: 100%;
+      left: 0;
+      width: 80%;
+      padding: 0;
+      position: absolute;
+      background-color: #fff;
+      margin: 2px 10%;
+      @include transition(all .4s ease-out);
+      @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2));
+      .item {
+        @include transition(all .4s ease-out);
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0 12px;
+        cursor: pointer;
+        &:hover {
+          background-color: #edf4f5;
+          color: #4d5556;
+        }
+      }
     }
   }
   &.secondary {

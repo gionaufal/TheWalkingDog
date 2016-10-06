@@ -1,30 +1,49 @@
-body[data-path$="/sign_up"], body[data-path$="/sign_in"] {
-  .container > h2 {
-    font-family: 'montserratsemibold', sans;
-    font-size: 36px;
-    & + form {
-      margin-top: 60px;
-    }
-  }
-}
-
-body[data-path^="/walkers"] {
-  .container > h2 {
-    color: $red;
-  }
-}
-
-body[data-path^="/users"] {
-  .container > h2 {
-    color: $yellow;
-  }
-}
-
 .form-inputs {
   $h: 48px;
   .input-field {
     position: relative;
     height: $h;
+    & + .boolean {
+      margin-top: $h;
+      height: $h;
+      line-height: $h;
+      position: relative;
+      label.boolean.optional {
+        margin-left: 36px;
+        & + label {
+          position: absolute;
+          left: -8px;
+          top: 8px;
+        }
+      }
+      label {
+        cursor: pointer;
+        position: relative;
+        color: $blue;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 3px;
+        @include transition(all .4s ease-out);
+      }
+      input.boolean {
+        margin-left: 12px;
+        display: none;
+        & + .lever.boolean.optional {
+          height: $h/2;
+          width: $h/2;
+          border: 2px solid $blue;
+          display: inline-block;
+          @include transition(all .4s ease-out);
+          @include border-radius($h/2);
+        }
+        &:checked {
+          & + .lever.boolean.optional {
+            background-color: $blue;
+          }
+        }
+      }
+
+    }
     .help-block {
       font-family: 'montserratlight', sans;
       @include opacity(0);
@@ -92,5 +111,47 @@ body[data-path^="/users"] {
   }
   & + .form-actions {
     margin: $h 0;
+  }
+}
+
+body[data-path$="/sign_up"], body[data-path$="/sign_in"] {
+  .container > h2 {
+    font-family: 'montserratsemibold', sans;
+    font-size: 36px;
+    & + form {
+      margin-top: 60px;
+    }
+  }
+}
+
+body[data-path^="/walkers"] {
+  .container > h2 {
+    color: $red;
+  }
+  .form-inputs .input-field + .boolean input.boolean {
+    & + .lever.boolean.optional {
+      border: 2px solid $red;
+    }
+    &:checked {
+      & + .lever.boolean.optional {
+        background-color: $red;
+      }
+    }
+  }
+}
+
+body[data-path^="/users"] {
+  .container > h2 {
+    color: $yellow;
+  }
+  .form-inputs .input-field + .boolean input.boolean {
+    & + .lever.boolean.optional {
+      border: 2px solid $yellow;
+    }
+    &:checked {
+      & + .lever.boolean.optional {
+        background-color: $yellow;
+      }
+    }
   }
 }

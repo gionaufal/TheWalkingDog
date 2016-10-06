@@ -1,24 +1,30 @@
-<section class="sign-in">
-  <%= link_to 'Se cadastre como walker!', new_walker_registration_path %>
+<section id='about'>
+  <p class='intro'>
+    Encontre pessoas especializadas para passear com seu melhor amigo próximas a você
+  </p>
 </section>
 <% if @walkers.empty? %>
   <%= flash[:alert] %>
 <% else %>
-  <section id='about'>
-    <p>
-      Encontre pessoas especializadas para passear com seu melhor amigo próximas a você
-    </p>
-  </section>
-
   <section class='search'>
-    <%= form_tag("/search/", method: 'get') do%>
-      <%= label_tag(:region, 'Onde você está?')%>
-      <%= select_tag(:region, options_for_select(@regions)) %>
-      <%= submit_tag('Procurar') %>
-
-    <% end %>
+    <div class='autocomplete'>
+      <%= form_tag("/search/", method: 'get') do%>
+        <%= label_tag(:region, 'Onde você está?')%>
+        <%= select_tag(:region, options_for_select(@regions)) %>
+        <%= submit_tag('Procurar') %>
+      <% end %>
+    </div>
   </section>
+<% end %>
 
+<section class="sign-up">
+  <%= link_to 'Se cadastre como dono', new_user_registration_path,
+  class: "button primary", role: "button"%>
+  <%= link_to 'Se cadastre como walker!', new_walker_registration_path,
+    class: "button primary red", role: "button" %>
+</section>
+
+<% unless @walkers.empty? %>
   <section class='walkers'>
     <% @walkers.each do |walker| %>
       <%= link_to walker do %>

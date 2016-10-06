@@ -11,8 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+// require materialize-sprockets
+// require materialize-form
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
 //= require components/autocomplete
+//= require components/form

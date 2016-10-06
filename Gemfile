@@ -16,6 +16,8 @@ gem 'font-awesome-sass'
 gem 'paperclip', '~> 5.0.0'
 gem 'faker'
 gem 'devise'
+gem 'materialize-sass'
+gem 'materialize-form'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'

@@ -1,0 +1,12 @@
+<section class='new-proposal'>
+  <h2>Nova proposta</h2>
+  <%= simple_form_for [@walker, @proposal] do |f| %>
+    <%= f.input :datetime, as: :datetime, label: 'Hora e data' %>
+    <%= f.input :dogs, collection: current_user.dogs, label: 'Nome do cão' %>
+    <%= f.input :gang,
+        collection: %w(Individual Grupo),
+        label: 'Tipo de passeio' %>
+    <%= f.input :observation, label: 'Observações' %>
+    <%= f.button :submit, 'Enviar' %>
+  <% end %>
+</section>

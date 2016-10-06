@@ -33,18 +33,12 @@
         1,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/models/proposal.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/home_controller.rb": [
         1,
         1,
-        12,
-        12,
-        12,
+        13,
+        13,
+        13,
         null,
         null
       ],
@@ -126,7 +120,7 @@
       "/Users/campuscode7/workspace/the_walking_dog/app/controllers/walkers_controller.rb": [
         1,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -134,11 +128,41 @@
         null,
         null
       ],
-      "/Users/campuscode7/workspace/the_walking_dog/app/controllers/proposal_controller.rb": [
+      "/Users/campuscode7/workspace/the_walking_dog/app/controllers/proposals_controller.rb": [
         1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
         1,
         1,
         null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/campuscode7/workspace/the_walking_dog/app/models/proposal.rb": [
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/campuscode7/workspace/the_walking_dog/app/channels/application_cable/channel.rb": [
@@ -164,6 +188,6 @@
         0
       ]
     },
-    "timestamp": 1475629153
+    "timestamp": 1475712736
   }
 }

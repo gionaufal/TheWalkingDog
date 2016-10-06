@@ -5,8 +5,9 @@ Rails.application.routes.draw do
     resources :dogs, only: [:new, :create]
   end
   root to: 'home#index'
-  resources :proposal, only: [:new, :create]
-  resources :walkers, only: [:show]
+  resources :walkers, only: [:show] do
+    resources :proposals, only: [:new, :create]
+  end
   get '/search/', to: 'walkers#search'
   get '/meu-perfil', to: 'profiles#my_profile', as: 'my_profile'
   get "/profile/:id", to: 'profiles#show', as: 'profile'

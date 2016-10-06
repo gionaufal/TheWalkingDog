@@ -11,7 +11,7 @@ pt-BR:
     error_notification:
       default_message: "Por favor reveja os erros abaixo:"
     labels:
-      user:
+      dog:
         name: 'Nome'
         age: 'Idade'
         size: 'Porte'
@@ -27,8 +27,7 @@ pt-BR:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
-    labels:
-      walkers:
+      walker:
         name: 'Nome'
         age: 'Idade'
         address: 'Endereço'
@@ -41,3 +40,5 @@ pt-BR:
         region: 'Região'
         password: 'Senha'
         password_confirmation: 'Confirmar senha'
+      user:
+        password: 'Senha'

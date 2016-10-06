@@ -32,6 +32,9 @@
             <% if user_signed_in? %>
               <li><span>Olá, <%= current_user.name %></span></li>
               <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
+            <%elsif walker_signed_in? %>
+              <li><span>Olá, <%= current_walker.name %></span></li>
+              <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
             <% else %>
               <li><%= link_to 'login como dono', new_user_session_path , class: "button secondary", role: "button"%></li>
               <li><%= link_to 'login como walker', new_walker_session_path , class: "button secondary red", role: "button"%></li>
@@ -42,6 +45,7 @@
     </nav>
   <div class='container'>
     <%= flash[:notice] %>
+    <%= flash[:error] %>
     <%= yield %>
   </div>
   </body>

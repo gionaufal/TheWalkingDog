@@ -6,7 +6,7 @@ feature 'user sign up' do
 
     visit root_path
 
-    click_on 'Cadastrar'
+    click_on 'Se cadastre como dono'
     fill_in 'Nome', with: user.name
     fill_in 'Endereço', with: user.address
     fill_in 'CPF', with: user.cpf
@@ -28,7 +28,7 @@ feature 'user sign up' do
 
     visit root_path
 
-    click_on 'Cadastrar'
+    click_on 'Se cadastre como dono'
 
     fill_in 'Nome', with: user.name
     fill_in 'CPF', with: user.cpf

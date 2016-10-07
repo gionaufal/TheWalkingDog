@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   end
   root to: 'home#index'
   resources :walkers, only: [:show] do
-    resources :proposals, only: [:new, :create]
+    resources :proposals, only: [:new, :create, :index] do
+      member do
+        post :approve
+        post :refuse
+      end
+    end
   end
   get '/search/', to: 'walkers#search'
   get '/meu-perfil', to: 'profiles#my_profile', as: 'my_profile'

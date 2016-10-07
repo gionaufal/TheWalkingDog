@@ -1,0 +1,26 @@
+<section class='proposals'>
+  <h2>Minhas propostas</h2>
+  <% @proposals.each do |proposal| %>
+    <div class="proposal jumbotron">
+      <p>Dono: <%= proposal.user.name %></p>
+      <p>Dono: <%= proposal.dogs %></p>
+      <p>Dono: <%= proposal.datetime %></p>
+      <p>Dono: <%= proposal.location %></p>
+      <p>Dono: <%= proposal.gang %></p>
+      <p>Dono: <%= proposal.observation %></p>
+
+      <% if proposal.pending? %>
+        <%= link_to 'Aceitar',
+            approve_walker_proposal_path(@walker, proposal),
+            {role:'button', method: :post}%>
+        <%= link_to 'Recusar',
+            refuse_walker_proposal_path(@walker, proposal),
+            {role:'button', method: :post}%>
+      <% elsif proposal.approved? %>
+        <p>Proposta aceita</p>
+      <% elsif proposal.refused? %>
+        <p>Proposta recusada</p>
+      <% end %>
+    </div>
+  <% end %>
+</section>

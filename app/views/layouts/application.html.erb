@@ -35,6 +35,7 @@
             <%elsif walker_signed_in? %>
               <li><span>Olá, <%= current_walker.name %></span></li>
               <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
+              <li><%= link_to 'Minhas propostas', walker_proposals_path(current_walker), class: "btn btn-default navbar-btn", role: "button" %></li>
             <% else %>
               <li><%= link_to 'login como dono', new_user_session_path , class: "button secondary", role: "button"%></li>
               <li><%= link_to 'login como walker', new_walker_session_path , class: "button secondary red", role: "button"%></li>

@@ -6,6 +6,7 @@
     <%= f.input :gang,
         collection: %w(Individual Grupo),
         label: 'Tipo de passeio' %>
+    <%= f.input :location, label: 'Localização' %>
     <%= f.input :observation, label: 'Observações' %>
     <%= f.button :submit, 'Enviar' %>
   <% end %>

@@ -18,6 +18,7 @@ feature 'User sends proposal to walker' do
     select '2016',                    from: 'proposal_datetime_1i'
     select dog.name,                  from: 'Nome do cão'
     select 'Individual',              from: 'Tipo de passeio'
+    fill_in 'Localização',            with: 'Rua dos bobos, 0'
     fill_in 'Observações',            with: 'Resting creepy face'
 
     click_on 'Enviar'

@@ -3,11 +3,11 @@
   <% @proposals.each do |proposal| %>
     <div class="proposal jumbotron">
       <p>Dono: <%= proposal.user.name %></p>
-      <p>Dono: <%= proposal.dogs %></p>
-      <p>Dono: <%= proposal.datetime %></p>
-      <p>Dono: <%= proposal.location %></p>
-      <p>Dono: <%= proposal.gang %></p>
-      <p>Dono: <%= proposal.observation %></p>
+      <p>Cães: <%= proposal.dogs %></p>
+      <p>Hora e data: <%= proposal.datetime %></p>
+      <p>Local: <%= proposal.location %></p>
+      <p>Tipo de passeio: <%= proposal.gang %></p>
+      <p>Observação: <%= proposal.observation %></p>
 
       <% if proposal.pending? %>
         <%= link_to 'Aceitar',

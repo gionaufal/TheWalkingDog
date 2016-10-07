@@ -38,6 +38,13 @@ class ProposalsController < ApplicationController
     redirect_to walker_proposals_path(params[:walker_id])
   end
 
+  def rate
+    proposal = Proposal.find(params[:id])
+    proposal.rating = params[:rating]
+    proposal.save
+    redirect_to my_profile_path
+  end
+
   private
 
   def proposal_params

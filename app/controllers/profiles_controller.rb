@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
 
   def my_profile
     @user = current_user
+    @proposals = Proposal.where(user_id: current_user.id)
     render :show
   end
 

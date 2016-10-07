@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       end
     end
   end
+  post 'proposals/:id/rate', to: 'proposals#rate', as: 'rate_proposal'
   get '/search/', to: 'walkers#search'
   get '/meu-perfil', to: 'profiles#my_profile', as: 'my_profile'
   get "/profile/:id", to: 'profiles#show', as: 'profile'

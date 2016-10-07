@@ -16,5 +16,6 @@
 //= require jquery_ujs
 //= require_tree .
 
+//= require components/body
 //= require components/autocomplete
 //= require components/form

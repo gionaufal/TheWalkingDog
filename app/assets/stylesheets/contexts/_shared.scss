@@ -1,5 +1,7 @@
 body {
-  @include background-image(linear-gradient(to bottom, #fff, #e9ebeb))
+  min-height: 100%;
+  background-repeat: no-repeat;
+  @include background-image(linear-gradient(to bottom, #fff, #e9ebeb));
 }
 
 input {

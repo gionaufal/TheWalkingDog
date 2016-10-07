@@ -5,6 +5,6 @@ FactoryGirl.define do
     size 'MyString'
     race 'MyString'
     personality 'MyString'
-    avatar { File.new('#{Rails.root}/spec/support/fixtures/Dogs-Bite.jpg') }
+    avatar { File.new("#{Rails.root}/spec/support/fixtures/Dogs-Bite.jpg") }
   end
 end

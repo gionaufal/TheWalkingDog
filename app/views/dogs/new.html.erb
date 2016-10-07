@@ -2,11 +2,11 @@
   <h2>Adicionar Cachorro</h2>
 
   <%= simple_form_for @dog do |f|%>
-    <%= f.input :name, label: 'Nome' %>
-    <%= f.input :age, label: 'Idade' %>
-    <%= f.input :size, label: 'Porte' %>
-    <%= f.input :race, label: 'Raça' %>
-    <%= f.input :personality, label: 'Personalidade' %>
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :size %>
+    <%= f.input :race %>
+    <%= f.input :personality %>
     <%= f.input :avatar, as: :file %>
     <%= f.button :submit, 'Salvar' %>
   <% end %>

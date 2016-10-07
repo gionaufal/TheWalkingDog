@@ -5,4 +5,6 @@ class Walker < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :name, :age, :address, :cpf, :bio, :experience, :price, :email,
             :phone, :region, presence: true
+  has_many :proposal
+  has_many :users, through: :proposal
 end

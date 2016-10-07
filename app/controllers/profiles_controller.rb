@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_walker!, only: [:show]
   before_action :authenticate_user!, only: [:my_profile]
 
   def my_profile

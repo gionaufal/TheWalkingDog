@@ -2,4 +2,52 @@ body[data-controller=walkers] {
   .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
     color: $red;
   }
+  &[data-action=show] {
+    $h: 60px;
+    .header {
+      height: 400px;
+      background-color: $red;
+      background-image: image-url("backgrounds/dog_2.jpg");
+      background-position: center;
+      background-size: 100%;
+      background-position: 0 80%;
+      margin-bottom: $h;
+      .button {
+        float: right;
+        margin: 24px;
+      }
+    }
+    h1 {
+      color: $red;
+      font-family: 'montserratextrabold', sans;
+    }
+    .row {
+      margin-left: 3px;
+      margin-right: 0;
+      &.aside {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 3px;
+        > span {
+          font-size: 12px;
+        }
+      }
+    }
+    dl {
+      margin-top: 36px;
+      color: #727272;
+      dt, dt.label {
+        color: #727272;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 3px;
+      }
+      dd {
+        margin-bottom: 18px;
+        font-size: 24px;
+        font-family: 'montserratlight', sans;
+      }
+    }
+  }
 }

@@ -27,6 +27,20 @@
     background-color: #fff;
   }
   &.autocomplete__button {
+    &.secondary.red {
+      background-color: $red;
+      color: #fff;
+      @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
+      input {
+        color: #fff;
+      }
+      .autocomplete__input {
+        color: #fff;
+      }
+      .autocomplete__list {
+        color: $red;
+      }
+    }
     position: relative;
     overflow: visible;
     .autocomplete__input {

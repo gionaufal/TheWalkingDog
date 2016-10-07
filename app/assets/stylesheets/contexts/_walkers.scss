@@ -1,0 +1,5 @@
+body[data-controller=walkers] {
+  .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
+    color: $red;
+  }
+}

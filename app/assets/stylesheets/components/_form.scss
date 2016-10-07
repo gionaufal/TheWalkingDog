@@ -125,6 +125,9 @@ body[data-path$="/sign_up"], body[data-path$="/sign_in"] {
 }
 
 body[data-path^="/walkers"] {
+  .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
+    color: $red;
+  }
   .container > h2 {
     color: $red;
   }
@@ -141,6 +144,9 @@ body[data-path^="/walkers"] {
 }
 
 body[data-path^="/users"] {
+  .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
+    color: $yellow;
+  }
   .container > h2 {
     color: $yellow;
   }

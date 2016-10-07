@@ -13,7 +13,9 @@ $(document).ready(function() {
     var select = autocomplete.find('select');
     var input = autocomplete.find('input[type=submit]');
 
-    var button = '<div class="autocomplete__button button primary white">';
+    var button = autocomplete.attr('data-context') === 'secondary'
+      ? '<div class="autocomplete__button button secondary red">'
+      : '<div class="autocomplete__button button primary white">';
     button += '<input class="autocomplete__input" type="text" value="' + label + '" />';
     button += '</div>';
 

@@ -7,19 +7,20 @@
   color: #fff;
   text-transform: lowercase;
   display: inline-block;
+  font-family: 'montserratlight', sans;
   @include border-radius($h/2);
   @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
   @include transition(all .4s ease-out);
-  &:hover {
+  &:hover, &:focus {
     color: #fff;
-    background-color: lighten($yellow, 10);
+    background-color: $yellow_hover;
     text-decoration: none;
     @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2));
   }
   &.red {
     background-color: $red;
-    &:hover {
-      background-color: lighten($red, 10);
+    &:hover, &:focus {
+      background-color: $red_hover;
     }
   }
   &.white {
@@ -81,14 +82,14 @@
     border: 1px solid $yellow;
     color: $yellow;
     @include box-shadow(none);
-    &:hover {
+    &:hover, &:focus {
       background-color: $yellow;
       color: #fff;
     }
     &.red {
       border: 1px solid $red;
       color: $red;
-      &:hover {
+      &:hover, &:focus {
         background-color: $red;
         color: #fff;
       }

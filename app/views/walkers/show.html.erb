@@ -8,3 +8,7 @@
 <% if current_user != @walker %>
   <%= link_to 'Enviar proposta', new_walker_proposal_path(@walker) %>
 <% end %>
+
+<% if current_walker == @walker %>
+  <%= link_to 'Editar perfil', edit_walker_registration_path(@walker), role: 'button' %>
+<% end %>

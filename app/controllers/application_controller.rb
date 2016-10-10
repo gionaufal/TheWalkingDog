@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys:
                                        [:name, :age, :address, :cpf, :bio,
                                         :experience, :price, :phone, :region])
+      devise_parameter_sanitizer.permit(:account_update, keys:
+                                        [:age, :address, :bio,
+                                        :experience, :price, :phone, :region])
+
     elsif resource_class == User
       devise_parameter_sanitizer.permit(:sign_up, keys:
                                        [:name, :address, :cpf, :phone])

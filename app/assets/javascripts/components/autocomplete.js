@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var autocompletes = $('.autocomplete');
-  // var loadAutocomplete = ;
+
   autocompletes.each(function() {
     var autocomplete = $(this);
     var label = autocomplete.find('label').text();
@@ -39,12 +39,23 @@ $(document).ready(function() {
       }
     };
 
+    let timeout;
+
+    function hide(element) {
+      $(element).addClass('hidden');
+    };
+
+    function show(element) {
+      $(element).removeClass('hidden');
+    };
+
     activeInput.on('keyup', function(e) {
       var found = [];
       var value = activeInput.val();
+      clearTimeout(timeout);
       activeButton.find('.autocomplete__list').remove();
       function search(element) {
-        return element.text.indexOf(value) === 0 ? element : undefined;
+        return element.text.toLowerCase().indexOf(value.toLowerCase()) === 0 ? element : undefined;
       }
       if (value.length > 0 && items.find(search)) {
         addItem(found, items.find(search).text)
@@ -53,6 +64,9 @@ $(document).ready(function() {
         found.push('região não encontrada');
         activeButton.append(foundTemplate(found));
       }
+      timeout = setTimeout(function() {
+        activeButton.find('.autocomplete__list').remove();
+      }, 1000);
     });
 
     activeInput.on('click', function() {

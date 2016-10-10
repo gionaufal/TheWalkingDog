@@ -19,3 +19,4 @@
 //= require components/body
 //= require components/autocomplete
 //= require components/form
+//= require components/flashes

@@ -27,7 +27,7 @@ class ProposalsController < ApplicationController
   def approve
     proposal = Proposal.find_by(params[:walker_id], params[:id])
     proposal.approved!
-    flash[:notice] = "Compromisso marcado para #{proposal.datetime}"
+    flash[:notice] = "Compromisso marcado para #{proposal.days}"
     redirect_to walker_proposals_path(params[:walker_id])
   end
 
@@ -48,7 +48,7 @@ class ProposalsController < ApplicationController
   private
 
   def proposal_params
-    params.require(:proposal).permit(:user_id, :walker_id, :datetime,
+    params.require(:proposal).permit(:user_id, :walker_id, :days, :hours,
                                      :dogs, :gang, :location, :observation)
   end
 end

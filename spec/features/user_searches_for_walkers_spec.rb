@@ -16,7 +16,9 @@ feature 'User searches for region' do
 
     click_on 'Procurar'
 
-    expect(page).to have_css('.walker', count: 3)
-    expect(page).not_to have_content 'Norte'
+    within '.walkers' do
+      expect(page).to have_css('.walker', count: 3)
+      expect(page).not_to have_content 'Norte'
+    end
   end
 end

@@ -5,5 +5,7 @@ class WalkersController < ApplicationController
 
   def search
     @walkers = Walker.where(region: params[:region])
+    @regions = Region::REGION
+    @region = params[:region]
   end
 end

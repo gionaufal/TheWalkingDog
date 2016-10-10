@@ -1,0 +1,163 @@
+.form-inputs {
+  $h: 48px;
+  .input-field {
+    position: relative;
+    height: $h;
+    & + .boolean {
+      margin-top: $h;
+      height: $h;
+      line-height: $h;
+      position: relative;
+      label.boolean.optional {
+        margin-left: 36px;
+        & + label {
+          position: absolute;
+          left: -8px;
+          top: 8px;
+        }
+      }
+      label {
+        cursor: pointer;
+        position: relative;
+        color: $blue;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 3px;
+        @include transition(all .4s ease-out);
+      }
+      input.boolean {
+        margin-left: 12px;
+        display: none;
+        & + .lever.boolean.optional {
+          height: $h/2;
+          width: $h/2;
+          border: 2px solid $blue;
+          display: inline-block;
+          @include transition(all .4s ease-out);
+          @include border-radius($h/2);
+        }
+        &:checked {
+          & + .lever.boolean.optional {
+            background-color: $blue;
+          }
+        }
+      }
+
+    }
+    .help-block {
+      font-family: 'montserratlight', sans;
+      @include opacity(0);
+      @include transition(all .4s ease-out);
+      &.active {
+        @include opacity(1);
+      }
+    }
+    &.has-content {
+      input + label {
+        margin-top: -12px;
+        font-size: 12px;
+      }
+    }
+    input, textarea {
+      height: $h;
+      line-height: $h;
+      border: none;
+      border-bottom: 1px solid $blue;
+      color: $blue;
+      font-size: 24px;
+      width: 100%;
+      font-family: 'montserratlight', sans;
+      @include transition(all .4s ease-out);
+      &:focus {
+        outline: none;
+        @include box-shadow(none);
+        & + label {
+          margin-top: -12px;
+          font-size: 12px;
+        }
+      }
+      & + label {
+        position: absolute;
+        margin-top: 12px;
+        top: 0;
+        left: 0;
+        color: $blue;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 3px;
+        @include transition(all .4s ease-out);
+        abbr {
+          display: none;
+        }
+      }
+    }
+    &.text{
+      height: $h * 4;
+    }
+    textarea {
+      height: $h * 3;
+      border: 1px solid $blue;
+      margin-top: $h;
+      padding: 0 12px;
+      &:focus {
+        & + label {
+          margin-top: 12px;
+        }
+      }
+    }
+    & + .input-field {
+      margin-top: $h;
+    }
+  }
+  & + .form-actions {
+    margin: $h 0;
+  }
+}
+
+body[data-path$="/sign_up"], body[data-path$="/sign_in"] {
+  .container > h2 {
+    font-family: 'montserratsemibold', sans;
+    font-size: 36px;
+    & + form {
+      margin-top: 60px;
+    }
+  }
+}
+
+body[data-path^="/walkers"] {
+  .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
+    color: $red;
+  }
+  .container > h2 {
+    color: $red;
+  }
+  .form-inputs .input-field + .boolean input.boolean {
+    & + .lever.boolean.optional {
+      border: 2px solid $red;
+    }
+    &:checked {
+      & + .lever.boolean.optional {
+        background-color: $red;
+      }
+    }
+  }
+}
+
+body[data-path^="/users"] {
+  .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
+    color: $yellow;
+  }
+  .container > h2 {
+    color: $yellow;
+  }
+  .form-inputs .input-field + .boolean input.boolean {
+    & + .lever.boolean.optional {
+      border: 2px solid $yellow;
+    }
+    &:checked {
+      & + .lever.boolean.optional {
+        background-color: $yellow;
+      }
+    }
+  }
+}

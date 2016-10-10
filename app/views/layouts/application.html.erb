@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body data-controller="<%= controller_name %>">
+  <body data-controller="<%= controller_name %>" data-action="<%= action_name %>" data-path="<%= request.fullpath %>">
     <div class="overlay"></div>
     <%= render 'shared/flash' %>
     <nav class="navbar navbar-default">
@@ -23,21 +23,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">The Walking Dog
-          <i class="fa fa-paw" aria-hidden="true"></i></a>
+          <%= link_to(root_path, class: "navbar-brand") do %>
+            The Walking Dog <i class="fa fa-paw" aria-hidden="true"></i>
+          <% end %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
               <li><span>Olá, <%= current_user.name %></span></li>
-              <li><%= link_to 'Meu perfil', my_profile_path, class: "btn btn-default navbar-btn", role: "button" %></li>
-              <li><%= link_to 'logout', destroy_user_session_path, class: "btn btn-default navbar-btn", role:'button', method: :delete %></li>
+              <li><%= link_to 'Meu perfil', my_profile_path, class: "button secondary yellow", role: "button" %></li>
+              <li><%= link_to 'logout', destroy_user_session_path, class: "button secondary", role:'button', method: :delete %></li>
             <% elsif walker_signed_in? %>
               <li><span>Olá, <%= current_walker.name %></span></li>
-              <li><%= link_to 'Meu perfil', walker_path(current_walker), class: "btn btn-default navbar-btn", role: "button" %></li>
-              <li><%= link_to 'Minhas propostas', walker_proposals_path(current_walker), class: "btn btn-default navbar-btn", role: "button" %></li>
-              <li><%= link_to 'logout', destroy_walker_session_path, class: "btn btn-default navbar-btn", role:'button', method: :delete %></li>
+              <li><%= link_to 'Meu perfil',  walker_path(current_walker), class: "button secondary red", role: "button" %></li>
+              <li><%= link_to 'Minhas propostas', walker_proposals_path(current_walker), class: "button secondary red", role: "button" %></li>
+              <li><%= link_to 'logout', destroy_walker_session_path, class: "button secondary red", role:'button', method: :delete %></li>
             <% else %>
               <li><%= link_to 'login como dono', new_user_session_path , class: "button secondary", role: "button"%></li>
               <li><%= link_to 'login como walker', new_walker_session_path , class: "button secondary red", role: "button"%></li>

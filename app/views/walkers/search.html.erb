@@ -1,10 +1,27 @@
+<div class='autocomplete' data-context="secondary">
+  <%= form_tag("/search/", method: 'get') do%>
+    <%= label_tag(:region, 'Filtrar walkers')%>
+    <%= select_tag(:region, options_for_select(@regions)) %>
+    <%= submit_tag('Procurar') %>
+  <% end %>
+</div>
+
 <section class='walkers'>
-  <%= @walkers.each do |walker| %>
-    <%= link_to walker do %>
-    <div class="walker">
-      <p><%= walker.name %></p>
-      <p><%= walker.region %></p>
+  <h1>Walkers na região <%= @region %></h1>
+  <% @walkers.each do |walker| %>
+    <div class="walker cols person_item">
+      <div class="col thumb">
+      </div>
+      <div class="col data">
+        <h1><%= walker.name %></h1>
+        <p class="row aside">
+          <span class="region"><%= walker.region %></span> | <span class="price">R$<%= walker.price %> / h</span>
+        </p>
+        <p class="row">
+          <%= link_to 'Saiba mais', walker, class: "button secondary red"%>
+        </p>
+      </div>
     </div>
-    <% end %>
+
   <% end %>
 </section>

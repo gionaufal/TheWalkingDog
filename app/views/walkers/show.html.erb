@@ -1,14 +1,30 @@
-<h1>Perfil <%= @walker.name %></h1>
-<%= @walker.age %>
-<%= @walker.bio %>
-<%= @walker.experience %>
-<%= @walker.price %>
-<%= @walker.region %>
-
-<% if current_user != @walker %>
-  <%= link_to 'Enviar proposta', new_walker_proposal_path(@walker) %>
-<% end %>
-
-<% if current_walker == @walker %>
-  <%= link_to 'Editar perfil', edit_walker_registration_path(@walker), role: 'button' %>
-<% end %>
+<header class="header">
+  <% if current_user != @walker %>
+    <%= link_to 'Enviar proposta', new_walker_proposal_path(@walker), class: "button primary red" %>
+  <% end %>
+</header>
+<section class="profile">
+  <h1><%= @walker.name %></h1>
+  <p class="row aside">
+    <span class="region"><%= @walker.region %></span> | <span class="price">R$<%= @walker.price %> / h</span>
+  </p>
+  <div class="data">
+    <dl>
+      <dt class="label">Idade</dt>
+      <dd>
+        <%= @walker.age %>
+      </dd>
+      <dt class="label">Experiência</dt>
+      <dd>
+        <%= @walker.experience %>
+      </dd>
+      <dt class="label">Bio</dt>
+      <dd>
+        <%= @walker.bio %>
+      </dd>
+    </dl>
+  </div>
+  <% if current_walker == @walker %>
+    <%= link_to 'Editar perfil', edit_walker_registration_path(@walker), class: "button primary red" %>
+  <% end %>
+</section>

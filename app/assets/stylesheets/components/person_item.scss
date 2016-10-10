@@ -1,0 +1,47 @@
+.person_item {
+  &.cols {
+    .col {
+      display: inline-block;
+      vertical-align: middle;
+      .row {
+        margin-left: 3px;
+        margin-right: 0;
+        &.aside {
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: 3px;
+          > span {
+            font-size: 12px;
+          }
+        }
+      }
+      & + .col {
+        margin-left: 12px;
+      }
+    }
+    .col.thumb {
+      $s: 120px;
+      height: $s;
+      width: $s;
+      background-color: $yellow;
+      @include border-radius($s/2);
+    }
+    .col.data {
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: 'montserratlight', sans;
+      }
+      .button {
+        margin-left: -6px;
+      }
+    }
+  }
+  &.walker {
+    &.cols {
+      .col.thumb {
+        background-color: $red;
+      }
+    }
+  }
+}

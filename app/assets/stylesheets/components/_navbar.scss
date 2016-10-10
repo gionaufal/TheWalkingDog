@@ -5,6 +5,11 @@
   border: none;
   padding: 24px;
   min-height: $h;
+  span {
+    display: inline-block;
+    height: $h;
+    line-height: $h;
+  }
   .container-fluid {
     padding: 0;
     min-height: $h;

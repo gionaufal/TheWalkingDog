@@ -23,16 +23,3 @@
   <%= link_to 'Se cadastre como walker!', new_walker_registration_path,
     class: "button primary red", role: "button" %>
 </section>
-
-<% unless @walkers.empty? %>
-  <section class='walkers'>
-    <% @walkers.each do |walker| %>
-      <%= link_to walker do %>
-      <div class="walker">
-        <p><%= walker.name %></p>
-        <p><%= walker.region %></p>
-      </div>
-      <% end %>
-    <% end %>
-  </section>
-<% end %>

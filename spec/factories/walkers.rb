@@ -27,6 +27,5 @@ FactoryGirl.define do
     end
     phone '1211412'
     password '12345678'
-    avatar { File.new("#{Rails.root}/spec/support/fixtures/dogwalker.jpg") }
   end
 end

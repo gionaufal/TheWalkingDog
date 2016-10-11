@@ -12,7 +12,8 @@
     <%= f.input :experience %>
     <%= f.input :price, as: :float %>
     <%= f.input :phone, as: :tel %>
-    <%= f.input :region %>
+    <%= f.input :region, collection: %w(Centro Norte Sul Leste Oeste) %>
+    <%= f.input :avatar, as: :file %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>

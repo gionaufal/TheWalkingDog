@@ -16,10 +16,11 @@
     </div>
   </section>
 <% end %>
-
-<section class="sign-up">
-  <%= link_to 'Se cadastre como dono', new_user_registration_path,
-  class: "button primary", role: "button"%>
-  <%= link_to 'Se cadastre como walker!', new_walker_registration_path,
-    class: "button primary red", role: "button" %>
-</section>
+<% unless user_signed_in? || walker_signed_in? %>
+  <section class="sign-up">
+    <%= link_to 'Se cadastre como dono', new_user_registration_path,
+    class: "button primary", role: "button"%>
+    <%= link_to 'Se cadastre como walker!', new_walker_registration_path,
+      class: "button primary red", role: "button" %>
+  </section>
+<% end %>

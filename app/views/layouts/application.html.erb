@@ -12,7 +12,6 @@
 
   <body data-controller="<%= controller_name %>" data-action="<%= action_name %>" data-path="<%= request.fullpath %>">
     <div class="overlay"></div>
-    <%= render 'shared/flash' %>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,8 +47,7 @@
       </div><!-- /.container-fluid -->
     </nav>
   <div class='container'>
-    <%= flash[:notice] %>
-    <%= flash[:error] %>
+    <%= render 'shared/flash' %>
     <%= yield %>
   </div>
   </body>

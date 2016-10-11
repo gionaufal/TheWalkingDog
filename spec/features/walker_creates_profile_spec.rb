@@ -17,7 +17,9 @@ feature 'walker creates a profile' do
     fill_in 'Preço base', with: walker.price
     fill_in 'Email', with: walker.email
     fill_in 'Telefone', with: walker.phone
-    fill_in 'Região', with: walker.region
+    select walker.region, from: 'Região'
+    attach_file('walker_avatar',
+                "#{Rails.root}/spec/support/fixtures/dogwalker.jpg")
     fill_in 'Senha', with: walker.password
     fill_in 'Confirmar senha', with: walker.password
 

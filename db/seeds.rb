@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+FactoryGirl.create_list(:walker, 5, region: 'Centro')
+FactoryGirl.create_list(:walker, 6, region: 'Norte')
+FactoryGirl.create_list(:walker, 3, region: 'Oeste')
+FactoryGirl.create_list(:walker, 7, region: 'Sul')
+FactoryGirl.create_list(:walker, 2, region: 'Leste')

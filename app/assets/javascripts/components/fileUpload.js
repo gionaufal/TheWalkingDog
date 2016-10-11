@@ -5,7 +5,9 @@ $(document).ready(function() {
     var field = $(this);
     var input = field.find('input.file.optional');
     var label = field.find('span.file.optional');
-    var button = "<div class='button secondary'>"+ label.text()+"</div>";
+    var buttonClasses = $('body').attr('data-path').indexOf('walker') > -1
+      ? 'red' : ''
+    var button = "<div class='button secondary " + buttonClasses + "'>"+ label.text()+"</div>";
 
     field.append(button);
 

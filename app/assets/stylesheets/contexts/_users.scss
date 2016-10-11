@@ -1,4 +1,4 @@
-body[data-controller=user], body[data-controller=profiles] {
+body[data-controller=user], body[data-controller=dogs], body[data-controller=profiles] {
   .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
     color: $yellow;
   }

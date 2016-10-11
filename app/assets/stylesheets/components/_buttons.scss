@@ -19,7 +19,7 @@
   }
   &.red {
     background-color: $red;
-    &:hover, &:focus {
+    &:hover, &:focus, &.hover {
       background-color: $red_hover;
     }
   }
@@ -67,7 +67,7 @@
         margin: 0;
         padding: 0 12px;
         cursor: pointer;
-        &:hover {
+        &:hover, &.hover {
           background-color: #edf4f5;
           color: #4d5556;
         }
@@ -82,14 +82,14 @@
     border: 1px solid $yellow;
     color: $yellow;
     @include box-shadow(none);
-    &:hover, &:focus {
+    &:hover, &.hover, &:focus {
       background-color: $yellow;
       color: #fff;
     }
     &.red {
       border: 1px solid $red;
       color: $red;
-      &:hover, &:focus {
+      &:hover, &.hover, &:focus {
         background-color: $red;
         color: #fff;
       }

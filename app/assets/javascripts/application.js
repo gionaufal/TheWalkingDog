@@ -20,3 +20,4 @@
 //= require components/autocomplete
 //= require components/form
 //= require components/flashes
+//= require components/fileUpload

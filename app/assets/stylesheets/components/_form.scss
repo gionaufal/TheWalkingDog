@@ -1,5 +1,18 @@
 .form-inputs {
   $h: 48px;
+  .file-field {
+    position: relative;
+    overflow: hidden;
+    .btn, .file-path-wrapper {
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      @include opacity(0.01);
+    }
+    .button{
+      cursor: pointer;
+    }
+  }
   .input-field {
     position: relative;
     height: $h;

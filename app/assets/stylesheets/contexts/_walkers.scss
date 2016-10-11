@@ -2,6 +2,14 @@ body[data-controller=walkers] {
   .navbar.navbar-default > .container .navbar-brand, .navbar.navbar-default .navbar-brand {
     color: $red;
   }
+  h1 {
+    margin: 60px 0;
+  }
+  .walker {
+    & + .walker {
+      margin-top: 36px;
+    }
+  }
   &[data-action=show] {
     $h: 60px;
     .header {

@@ -66,7 +66,7 @@ $(document).ready(function() {
       }
       timeout = setTimeout(function() {
         activeButton.find('.autocomplete__list').remove();
-      }, 1000);
+      }, 7000);
     });
 
     activeInput.on('click', function() {

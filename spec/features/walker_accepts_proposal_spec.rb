@@ -13,13 +13,13 @@ feature 'Walker accepts proposal' do
 
     expect(page).to have_content proposal.user.name
     expect(page).to have_content proposal.dogs
-    expect(page).to have_content proposal.datetime
+    expect(page).to have_content proposal.days
     expect(page).to have_content proposal.location
 
     click_on 'Aceitar'
 
     expect(current_path).to eq(walker_proposals_path(walker))
-    expect(page).to have_content "Compromisso marcado para #{proposal.datetime}"
+    expect(page).to have_content "Compromisso marcado para #{proposal.days}"
     expect(page).to have_content 'Proposta aceita'
   end
 
@@ -35,7 +35,7 @@ feature 'Walker accepts proposal' do
 
     expect(page).to have_content proposal.user.name
     expect(page).to have_content proposal.dogs
-    expect(page).to have_content proposal.datetime
+    expect(page).to have_content proposal.days
     expect(page).to have_content proposal.location
 
     click_on 'Recusar'

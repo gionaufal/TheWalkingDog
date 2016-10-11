@@ -11,11 +11,8 @@ feature 'User sends proposal to walker' do
     visit walker_path walker
 
     click_on 'Enviar proposta'
-    select '12',                      from: 'proposal_datetime_4i'
-    select '01',                      from: 'proposal_datetime_5i'
-    select '12',                      from: 'proposal_datetime_3i'
-    select 'Outubro',                 from: 'proposal_datetime_2i'
-    select '2016',                    from: 'proposal_datetime_1i'
+    select 'Segunda-feira',           from: 'Dias'
+    select 'Noite',                   from: 'Período'
     select dog.name,                  from: 'Nome do cão'
     select 'Individual',              from: 'Tipo de passeio'
     fill_in 'Localização',            with: 'Rua dos bobos, 0'

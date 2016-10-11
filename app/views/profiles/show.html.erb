@@ -52,48 +52,49 @@
         </div>
       <% end %>
     <% end %>
-  </div>
-  <% if @user == current_user %>
-    <section class='proposals'>
-      <h1>Minhas propostas</h1>
-      <% if @proposals.empty? %>
-        <p>Você não enviou propostas</p>
-      <% else %>
-        <% @proposals.each do |proposal| %>
-          <p>Walker: <%= proposal.walker.name %></p>
-          <p>Cães: <%= proposal.dogs %></p>
-          <p>Hora e data: <%= proposal.datetime %></p>
-          <% if proposal.pending? %>
-            <p>Aguardando resposta</p>
-          <% elsif proposal.refused? %>
-            <p>Proposta recusada</p>
-          <% elsif proposal.approved? %>
-            <p>Proposta aceita</p>
-            <% if proposal.rating %>
-              <p>Nota: <%= proposal.rating %></p>
-            <% else %>
-              <p>Avalie o walker!</p>
-              <%= form_tag(rate_proposal_path(proposal), method: 'post') do %>
-                <%= radio_button_tag(:rating, "1") %>
-                <%= label_tag(:rating_1, "1") %>
-                <%= radio_button_tag(:rating, "2") %>
-                <%= label_tag(:rating_2, "2") %>
-                <%= radio_button_tag(:rating, "3") %>
-                <%= label_tag(:rating_3, "3") %>
-                <%= radio_button_tag(:rating, "4") %>
-                <%= label_tag(:rating_4, "4") %>
-                <%= radio_button_tag(:rating, "5") %>
-                <%= label_tag(:rating_5, "5") %>
-                <%= submit_tag('Enviar nota') %>
-              <% end %>
-            <% end %>
+</section>
 
+<% if @user == current_user %>
+  <section class='proposals'>
+    <h2>Minhas propostas</h2>
+    <% if @proposals.empty? %>
+      <p>Você não enviou propostas</p>
+    <% else %>
+      <% @proposals.each do |proposal| %>
+        <p>Walker: <%= proposal.walker.name %></p>
+        <p>Cães: <%= proposal.dogs %></p>
+        <p>Dias: <%= proposal.days %></p>
+        <p>Período: <%= proposal.hours %></p>
+        <% if proposal.pending? %>
+          <p>Aguardando resposta</p>
+        <% elsif proposal.refused? %>
+          <p>Proposta recusada</p>
+        <% elsif proposal.approved? %>
+          <p>Proposta aceita</p>
+          <% if proposal.rating %>
+            <p>Nota: <%= proposal.rating %></p>
+          <% else %>
+            <p>Avalie o walker!</p>
+            <%= form_tag(rate_proposal_path(proposal), method: 'post') do %>
+              <%= radio_button_tag(:rating, "1") %>
+              <%= label_tag(:rating_1, "1") %>
+              <%= radio_button_tag(:rating, "2") %>
+              <%= label_tag(:rating_2, "2") %>
+              <%= radio_button_tag(:rating, "3") %>
+              <%= label_tag(:rating_3, "3") %>
+              <%= radio_button_tag(:rating, "4") %>
+              <%= label_tag(:rating_4, "4") %>
+              <%= radio_button_tag(:rating, "5") %>
+              <%= label_tag(:rating_5, "5") %>
+              <%= submit_tag('Enviar nota') %>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>
-    </section>
-  <% end %>
-  <% if current_user == @user %>
-    <%= link_to 'Editar perfil', edit_user_registration_path(@user), class: "button primary" %>
-  <% end %>
-</section>
+    <% end %>
+  </section>
+<% end %>
+
+<% if current_user == @user %>
+  <%= link_to 'Editar perfil', edit_user_registration_path(@user), class: "button primary" %>
+<% end %>

@@ -2,11 +2,17 @@ require 'rails_helper'
 
 feature 'user view walker profile' do
   scenario 'successfully' do
-    walker = create(:walker)
+    walker = create(:walker, region: 'Centro')
 
     visit root_path
 
-    click_on walker.name
+    select 'Centro', from: 'Onde você está?'
+
+    click_on 'Procurar'
+
+    within '.walkers' do
+      click_on 'Saiba mais'
+    end
 
     expect(page).to have_content walker.name
     expect(page).to have_content walker.age

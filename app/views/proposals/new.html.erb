@@ -1,14 +1,18 @@
 <section class='new-proposal'>
   <h2>Nova proposta</h2>
   <%= simple_form_for [@walker, @proposal] do |f| %>
-    <%= f.input :days, collection: %w(Segunda-feira Terça-feira Quarta-feira Quinta-feira Sexta-feira Sábado Domingo),label: 'Dias' %>
-    <%= f.input :hours, collection: %w(Manhã Tarde Noite),label: 'Período' %>
-    <%= f.input :dogs, collection: current_user.dogs, label: 'Nome do cão' %>
-    <%= f.input :gang,
-        collection: %w(Individual Grupo),
-        label: 'Tipo de passeio' %>
-    <%= f.input :location, label: 'Localização' %>
-    <%= f.input :observation, label: 'Observações' %>
-    <%= f.button :submit, 'Enviar' %>
+    <div class="form-inputs">
+      <%= f.input :days, collection: %w(Segunda-feira Terça-feira Quarta-feira Quinta-feira Sexta-feira Sábado Domingo),label: 'Dias' %>
+      <%= f.input :hours, collection: %w(Manhã Tarde Noite),label: 'Período' %>
+      <%= f.input :dogs, collection: current_user.dogs, label: 'Nome do cão' %>
+      <%= f.input :gang,
+          collection: %w(Individual Grupo),
+          label: 'Tipo de passeio' %>
+      <%= f.input :location, label: 'Localização' %>
+      <%= f.input :observation, label: 'Observações' %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, 'Enviar', class: "button primary red" %>
+    </div>
   <% end %>
 </section>

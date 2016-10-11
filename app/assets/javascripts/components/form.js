@@ -9,6 +9,10 @@ $(document).ready(function() {
     inputs.each(function() {
       var input = $(this);
 
+      if (input.val().length > 0) {
+        input.parent().addClass('has-content');
+      }
+
       input.on('keyup', function() {
         var parent = input.parents('.input-field');
         if (input.val().length > 0) {

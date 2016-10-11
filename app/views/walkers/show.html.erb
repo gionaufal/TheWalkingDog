@@ -1,5 +1,5 @@
 <header class="header">
-  <% if current_user != @walker %>
+  <% if user_signed_in? %>
     <%= link_to 'Enviar proposta', new_walker_proposal_path(@walker), class: "button primary red" %>
   <% end %>
 </header>

@@ -8,6 +8,6 @@ class Walker < ApplicationRecord
   has_many :proposal
   has_many :users, through: :proposal
   has_attached_file :avatar, styles: { medium: '300x300>', thumb: '100x100>' },
-                     default_url: 'assets/images/dog.jpg'
+                     default_url: 'dog.jpg'
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 end

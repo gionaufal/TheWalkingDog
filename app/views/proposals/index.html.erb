@@ -1,27 +1,31 @@
 <section class='proposals'>
   <h2>Minhas propostas</h2>
-  <% @proposals.each do |proposal| %>
-    <div class="proposal jumbotron">
-      <p>Dono: <%= proposal.user.name %></p>
-      <p>Cães: <%= proposal.dogs %></p>
-      <p>Dias: <%= proposal.days %></p>
-      <p>Período: <%= proposal.hours %></p>
-      <p>Local: <%= proposal.location %></p>
-      <p>Tipo de passeio: <%= proposal.gang %></p>
-      <p>Observação: <%= proposal.observation %></p>
+  <% unless  @proposals.empty? %>
+    <% @proposals.each do |proposal| %>
+      <div class="proposal jumbotron">
+        <p>Dono: <%= proposal.user.name %></p>
+        <p>Cães: <%= proposal.dogs %></p>
+        <p>Dias: <%= proposal.days %></p>
+        <p>Período: <%= proposal.hours %></p>
+        <p>Local: <%= proposal.location %></p>
+        <p>Tipo de passeio: <%= proposal.gang %></p>
+        <p>Observação: <%= proposal.observation %></p>
 
-      <% if proposal.pending? %>
-        <%= link_to 'Aceitar',
-            approve_walker_proposal_path(@walker, proposal),
-            {role:'button', method: :post}%>
-        <%= link_to 'Recusar',
-            refuse_walker_proposal_path(@walker, proposal),
-            {role:'button', method: :post}%>
-      <% elsif proposal.approved? %>
-        <p>Proposta aceita</p>
-      <% elsif proposal.refused? %>
-        <p>Proposta recusada</p>
-      <% end %>
-    </div>
+        <% if proposal.pending? %>
+          <%= link_to 'Aceitar',
+             approve_walker_proposal_path(@walker, proposal),
+              {role:'button', method: :post}%>
+          <%= link_to 'Recusar',
+              refuse_walker_proposal_path(@walker, proposal),
+              {role:'button', method: :post}%>
+        <% elsif proposal.approved? %>
+          <p>Proposta aceita</p>
+        <% elsif proposal.refused? %>
+          <p>Proposta recusada</p>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Você ainda não tem propostas</p>
   <% end %>
 </section>

@@ -11,6 +11,7 @@
   <% @walkers.each do |walker| %>
     <div class="walker cols person_item">
       <div class="col thumb">
+        <%= image_tag walker.avatar.url(:thumb) %>
       </div>
       <div class="col data">
         <h1><%= walker.name %></h1>

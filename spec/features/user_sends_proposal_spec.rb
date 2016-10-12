@@ -26,7 +26,7 @@ feature 'User sends proposal to walker' do
   scenario 'fails to fill all fields' do
     user = create(:user)
     walker = create(:walker)
-    dog = create(:dog, user: user)
+    create(:dog, user: user)
 
     login_as(user, scope: :user)
 
@@ -34,7 +34,7 @@ feature 'User sends proposal to walker' do
 
     click_on 'Enviar proposta'
 
-    fill_in 'Observações',            with: 'Resting creepy face'
+    fill_in 'Observações', with: 'Resting creepy face'
 
     click_on 'Enviar'
 

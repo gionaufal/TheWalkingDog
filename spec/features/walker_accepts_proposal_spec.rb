@@ -43,7 +43,6 @@ feature 'Walker accepts proposal' do
     expect(current_path).to eq(walker_proposals_path(walker))
     expect(page).to have_content 'A proposta foi recusada'
     expect(page).to have_content 'Proposta recusada'
-
   end
 
   scenario 'sees all accepted and refused proposals' do
@@ -58,5 +57,4 @@ feature 'Walker accepts proposal' do
 
     expect(page).to have_css('.proposal', count: 6)
   end
-
 end

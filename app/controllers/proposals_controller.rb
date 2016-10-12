@@ -1,5 +1,4 @@
 class ProposalsController < ApplicationController
-
   def index
     @walker = Walker.find(params[:walker_id])
     @proposals = Proposal.where(walker_id: @walker.id)

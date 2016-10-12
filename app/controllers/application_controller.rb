@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
                                         :region, :avatar])
       devise_parameter_sanitizer.permit(:account_update, keys:
                                         [:age, :address, :bio,
-                                        :experience, :price, :phone,
-                                        :region, :avatar])
+                                         :experience, :price, :phone,
+                                         :region, :avatar])
 
     elsif resource_class == User
       devise_parameter_sanitizer.permit(:sign_up, keys:

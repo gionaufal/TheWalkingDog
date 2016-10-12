@@ -5,7 +5,7 @@ FactoryGirl.define do
     days 'Segunda-feira'
     hours 'Tarde'
     dogs Faker::Name.first_name
-    gang "Individual"
+    gang 'Individual'
     observation Faker::Hacker.say_something_smart
     location Faker::Address.street_name
     status Faker::Number.between(0, 2)

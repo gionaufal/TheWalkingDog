@@ -58,5 +58,4 @@ feature 'log in' do
 
     expect(page).to have_content 'Log in'
   end
-
 end

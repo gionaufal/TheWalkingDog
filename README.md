@@ -1,24 +1,12 @@
-# README
+# The Walking Dog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Walking Dog is a social platform where dog owners can find dog walkers near them. It is build with Rails 5, Materialize, Devise and Simple Form.
 
-Things you may want to cover:
+For now, it's only on Portuguese and will work for São Paulo/Brazil.
 
-* Ruby version
+## Next features
+* Geolocation
+* Payment within the app
+* More information about dogs, owners and walkers
+* Full deploy
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
